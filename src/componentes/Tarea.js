@@ -12,11 +12,10 @@ function Tarea({texto,tareas,setTareas,index}){
     
     function tacharTarea(){
         setRealizado(hecho=>!hecho)
-        console.log(hecho)
     }
     
     function borrarTarea(e){
-        setTareas(tareas.filter(t=>t.index!==index))
+        setTareas(tareas.filter((_, i) => i !== index));
     }
     
 }
